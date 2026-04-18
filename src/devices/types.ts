@@ -56,3 +56,16 @@ export const defaultWebSocketConfig: WebSocketConfig = {
   reconnect: false,
   reconnectInterval: 3000
 }
+
+export interface BluetoothConfig {
+  serviceUuid: string
+  rxUuid: string
+  txUuid: string
+}
+
+export const defaultBluetoothConfig: BluetoothConfig = {
+  serviceUuid: '6e400001-b5a3-f393-e0a9-e50e24dcca9e',
+  rxUuid: '6e400002-b5a3-f393-e0a9-e50e24dcca9e',
+  txUuid: '6e400003-b5a3-f393-e0a9-e50e24dcca9e'
+}
+

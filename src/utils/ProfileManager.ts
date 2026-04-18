@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { getStorage } from './StorageAdapter'
 import { type SavedDevice, type DeviceStore } from './ProfileTypes'
-import { defaultSerialConfig, defaultWebSocketConfig } from '../devices/types'
+import { defaultSerialConfig, defaultWebSocketConfig, defaultBluetoothConfig } from '../devices/types'
 import { defaultDisplayConfig, defaultSendConfig, defaultLayoutConfig, defaultChartConfig, defaultCanvasConfig } from '../components/types'
 
 const WORKSPACES_KEY = 'workspaces'
@@ -21,6 +21,7 @@ export interface Workspace {
 const defaultConfig = {
   serial: defaultSerialConfig,
   websocket: defaultWebSocketConfig,
+  bluetooth: defaultBluetoothConfig,
   display: defaultDisplayConfig,
   send: defaultSendConfig,
   layout: defaultLayoutConfig,

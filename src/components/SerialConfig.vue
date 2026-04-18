@@ -433,6 +433,17 @@ const handleConenctClick = async () => {
           </el-select>
         </el-form-item>
       </el-form>
+      <el-form v-else-if="selectedDeviceId === 'authorizedBluetooth' || authorizedDevices.find(d => d.id === selectedDeviceId)?.type === 'bluetooth'" :model="activeProfile.config.bluetooth" :inline="true" size="small" class="config-section">
+        <el-form-item label="Service UUID">
+          <el-input v-model="activeProfile.config.bluetooth.serviceUuid" style="width: 250px;" placeholder="例如: 6e400001-..." />
+        </el-form-item>
+        <el-form-item label="RX UUID">
+          <el-input v-model="activeProfile.config.bluetooth.rxUuid" style="width: 250px;" placeholder="写入(Write)特征" />
+        </el-form-item>
+        <el-form-item label="TX UUID">
+          <el-input v-model="activeProfile.config.bluetooth.txUuid" style="width: 250px;" placeholder="通知(Notify)特征" />
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
