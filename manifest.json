@@ -1,0 +1,16 @@
+{
+  "name": "串口助手",
+  "short_name": "串口助手",
+  "description": "Web Serial 串口调试工具",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#1d1e1f",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
